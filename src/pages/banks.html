@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="http://localhost:3000/styles/banks.css">
+    <title>Banks</title>
+</head>
+<body>
+    <header>
+        <h1 class="h1">Bank Management</h1>
+    </header>
+    <div class="container container-edit">
+        <button type="button" onclick="">Create Bank</button>
+        <button type="button" onclick="">Edit Bank</button>
+        <button type="button" onclick="">Delete Bank</button>
+        <button type="button" onclick="location.href='http://localhost:3000'">Back</button>
+    </div>
+    <div class="container-table">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Bank name</th>
+                    <th>Interest Rate</th>
+                    <th>Maximum loan</th>
+                    <th>Minimum down payment</th>
+                    <th>Loan term</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PrivatBank</td>
+                    <td>7%</td>
+                    <td>3000000</td>
+                    <td>500000</td>
+                    <td>250000</td>
+                </tr>
+                <tr class="active-row">
+                    <td>AlfaBank</td>
+                    <td>10%</td>
+                    <td>3500000</td>
+                    <td>430000</td>
+                    <td>300000</td>
+                </tr>
+                <tr>
+                    <td>CredoBank</td>
+                    <td>8%</td>
+                    <td>4000000</td>
+                    <td>500000</td>
+                    <td>250000</td>
+                </tr>
+                <tr>
+                    <td>MonoBank</td>
+                    <td>11%</td>
+                    <td>5000000</td>
+                    <td>500000</td>
+                    <td>300000</td>
+                </tr>
+            </tbody>
+            <script src="http://localhost:3000/scripts/banks.js"></script>
+        </table>
+    </div>
+    
+
+</body>
+</html>

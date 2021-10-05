@@ -10,6 +10,7 @@ const STATIC_PATH = path.join(process.cwd(), './src');
 const MIME_TYPES = {
   html: 'text/html; charset=UTF-8',
   js: 'application/javascript; charset=UTF-8',
+  css: 'text/css',
 }
 
 const serveFile = name => {
