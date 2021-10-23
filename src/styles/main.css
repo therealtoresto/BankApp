@@ -11,9 +11,8 @@ body {
 header {
     background-color: #f2f3f4;
     height: 10%;
-    top:0px;
+    top: 0px;
     overflow: auto;
-    
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -22,6 +21,10 @@ header {
     justify-content: center;
     align-items: center;
 }
+.container-main {
+    min-height: 80vh;
+    min-width: 100%;
+}
 
 .h1 {
     text-align: center;
@@ -29,7 +32,7 @@ header {
 }
 
 button {
-    margin-top: 300px;
+    margin-top: 20px;
     background-color: #FFFFFF;
     border: 1px solid #222222;
     border-radius: 8px;
@@ -41,7 +44,7 @@ button {
     font-size: 16px;
     font-weight: 600;
     line-height: 20px;
-    margin: 300px 40px;
+    margin-right: 40px;
     outline: none;
     padding: 13px 23px;
     position: relative;
@@ -54,6 +57,25 @@ button {
     width: 15%;
 }
 
+.field {
+    margin-top: 30px;
+    background-color: #FFFFFF;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #222222;
+    display: flex;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
+    font-size: 0.9em;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 13px 23px;
+    position: relative;
+    text-decoration: none;
+    transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+    width: 30%;
+}
+
 button:focus-visible {
     box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
     transition: box-shadow .2s;
@@ -62,6 +84,7 @@ button:focus-visible {
 button:active {
     background-color: #F7F7F7;
     border-color: #000000;
+    color: #222222;
     transform: scale(.96);
 }
 

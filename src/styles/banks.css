@@ -6,6 +6,21 @@
     justify-content: center;
     align-items: center;
 }
+.container-form {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container-form-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
+}
+.container-search {
+    
+}
 .styled-table {
     border-collapse: collapse;
     margin: 25px 0;
@@ -44,5 +59,16 @@
 
 .styled-table tbody tr:last-child {
     border-bottom: 1px solid #d3d3d3;
+}
+
+.button-functional {
+    display: inline-block;
+    width: 40%;
+    margin-right: 0;
+}
+
+.button-functional-confirm {
+    background-color: #778899;
+    color: white;
 }
 
