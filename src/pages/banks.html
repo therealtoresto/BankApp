@@ -13,12 +13,16 @@
         <h1 class="h1">Bank Management</h1>
     </header>
     <div class="container container-edit">
-        <button type="button" onclick="createBank" class="createButton">Create Bank</button>
-        <button type="button" onclick="" class="editButton">Edit Bank</button>
-        <button type="button" onclick="" class="deleteButton">Delete Bank</button>
+        <button type="button" onclick="createBank" class="create-button">Create Bank</button>
+        <button type="button" onclick="" class="edit-button">Edit Bank</button>
+        <button type="button" onclick="" class="delete-button">Delete Bank</button>
         <button type="button" onclick="location.href='http://localhost:3000'">Back</button>
     </div>
-    <div class="container-table">
+    <div class="container container-search">
+        <input type="search" class="field form-field-search" placeholder="Bank name">
+        <button class="button-functional button-functional-search" type="button">Search</button>
+    </div>
+    <div class="container container-table">
         <table class="styled-table">
             <thead>
                 <tr>
@@ -62,13 +66,13 @@
         </table>
     </div>
 
-    <div class="container-form">
-        <input type="text" class="field" placeholder="Bank name">
-        <input type="text" class="field" placeholder="Interest rate">
-        <input type="text" class="field" placeholder="Minimum loan">
-        <input type="text" class="field" placeholder="Minimum down payment">
-        <input type="text" class="field" placeholder="Loan term">
-        <div class="container-form-buttons">
+    <div class="container container-form">
+        <input type="text" class="field form-field-create" placeholder="Bank name">
+        <input type="text" class="field form-field-create" placeholder="Interest rate">
+        <input type="text" class="field form-field-create" placeholder="Minimum loan">
+        <input type="text" class="field form-field-create" placeholder="Minimum down payment">
+        <input type="text" class="field form-field-create" placeholder="Loan term">
+        <div class="container container-form-buttons">
             <button class="button-functional button-functional-clear" type="button">Clear</button>
             <button class="button-functional button-functional-confirm" type="button">Confirm</button>
         </div>

@@ -14,6 +14,8 @@ header {
     top: 0px;
     overflow: auto;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
 }
 
 .container {
@@ -26,13 +28,7 @@ header {
     min-width: 100%;
 }
 
-.h1 {
-    text-align: center;
-    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
-}
-
 button {
-    margin-top: 20px;
     background-color: #FFFFFF;
     border: 1px solid #222222;
     border-radius: 8px;
@@ -58,19 +54,17 @@ button {
 }
 
 .field {
-    margin-top: 30px;
     background-color: #FFFFFF;
     border: 1px solid #222222;
     border-radius: 8px;
     box-sizing: border-box;
     color: #222222;
-    display: flex;
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,"Helvetica Neue",sans-serif;
     font-size: 0.9em;
     font-weight: 600;
     line-height: 20px;
     padding: 13px 23px;
-    position: relative;
+    margin-bottom: 1%;
     text-decoration: none;
     transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
     width: 30%;
