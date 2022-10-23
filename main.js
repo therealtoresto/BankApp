@@ -43,7 +43,6 @@ const router = async client => {
   return result;
 };
 
-
 const serveFile = name => {
   const filePath = path.join(STATIC_PATH, name)
   if (!filePath.startsWith(STATIC_PATH)) {
