@@ -1,61 +1,83 @@
 'use strict';
 
 const table = document.querySelector('.container-table');
-const form = document.querySelector('.container-form');
-const search = document.querySelector('.container-search');
-const createButton = document.querySelector('.create-button');
-const editButton = document.querySelector('.edit-button');
-const deleteButton = document.querySelector('.delete-button')
+const creationForm = document.querySelector('.container-form');
+const editContainer = document.querySelector('.container-edit');
+const deleteContainer = document.querySelector('.container-delete');
+const createButton = document.querySelector('.menu-create-button');
+const editButton = document.querySelector('.menu-edit-button');
+const deleteButton = document.querySelector('.menu-delete-button')
 const clearButton = document.querySelector('.button-functional-clear');
 const confirmButton = document.querySelector('.button-functional-confirm');
-const fields = document.querySelectorAll('.field');
+const editFields = document.querySelectorAll('.form-field-create');
+let editFieldsValues = [];
 
-search.style.display = 'none';
-form.style.display = 'none';
+editContainer.style.display = 'none';
+creationForm.style.display = 'none';
+deleteContainer.style.display = 'none';
 
 const createBank = createButton.onclick = () => {
-
-    if (table.style.display == '') {
-        search.style.display = 'none';
+    if (creationForm.style.display == 'none') {
+        editContainer.style.display = 'none';
         table.style.display = 'none';
-        form.style.display = '';
+        creationForm.style.display = '';
     } else {
-        search.style.display = 'none';
+        editContainer.style.display = 'none';
         table.style.display = '';
-        form.style.display = 'none';
+        creationForm.style.display = 'none';
     }
 }
 
+
+
+
 const editBank = editButton.onclick = () => {
-    if (search.style.display == 'none') {
-        search.style.display = 'flex';
+    if (editContainer.style.display == 'none') {
+        editContainer.style.display = 'flex';
         table.style.display = '';
-        form.style.display = 'none';
+        creationForm.style.display = 'none';
+        deleteContainer.style.display = 'none';
 
     } else {
         table.style.display = '';
-        search.style.display = 'none';
-        form.style.display = 'none';
+        editContainer.style.display = 'none';
+        creationForm.style.display = 'none';
     }
 }
 
 const deleteBank = deleteButton.onclick = () => {
-    if (search.style.display == 'none') {
-        search.style.display = 'flex';
+    if (deleteContainer.style.display == 'none') {
+        deleteContainer.style.display = 'flex';
         table.style.display = '';
-        form.style.display = 'none';
+        creationForm.style.display = 'none';
+        editContainer.style.display = 'none';
 
     } else {
         table.style.display = '';
-        search.style.display = 'none';
-        form.style.display = 'none';
+        deleteContainer.style.display = 'none';
+        creationForm.style.display = 'none';
+    fetch('127.0.0.1:3000/banks/table').then(data => console.log(data));
+
     }
 }
 
+// const makeButtonActive = ();
+
 const clearCreationBankForm = clearButton.onclick = () => {
-    fields.forEach(elem => elem.value = '');
+    editFields.forEach(elem => elem.value = '');
 }
 
 const confirmCreationBankForm = confirmButton.onclick = () => {
+    let i = 0;
+    editFields.forEach(elem => editFieldsValues[i++] = elem.value);
+    console.log({ editFieldsValues });
+    // setData(...editFields);
     clearCreationBankForm();
 };
+
+// const updateTable = () => {
+//     fetch('/banks')
+//         .then(res => res.json())
+//         .then(data => console.log(data));
+// };
+// updateTable();
