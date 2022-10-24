@@ -4,30 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="http://localhost:3000/styles/main.css">
     <link rel="stylesheet" href="http://localhost:3000/styles/banks.css">
+    <link rel="shortcut icon" type="image/png" href="../image/favicon.png">
     <title>Banks</title>
 </head>
 <body>
     <header>
         <h1 class="h1">Bank Management</h1>
     </header>
-    <div class="container container-edit">
-        <button type="button" onclick="createBank" class="create-button">Create Bank</button>
-        <button type="button" onclick="" class="edit-button">Edit Bank</button>
-        <button type="button" onclick="" class="delete-button">Delete Bank</button>
-        <button type="button" onclick="location.href='http://localhost:3000'">Back</button>
+    <div class="container container-menu">
+        <button type="button" onclick="createBank" class="menu-create-button">Create Bank</button>
+        <button type="button" onclick="" class="menu-edit-button">Edit Bank</button>
+        <button type="button" onclick="" class="menu-delete-button">Delete Bank</button>
+        <button role="button" onclick="location.href='http://localhost:3000'">Back</button>
     </div>
-    <div class="container container-search">
-        <input type="search" class="field form-field-search" placeholder="Bank name">
-        <button class="button-functional button-functional-search" type="button">Search</button>
+    <div class="container container-edit">
+        <input type="search" class="field form-field-edit" placeholder="Bank name">
+        <button class="button-functional button-functional-edit" type="button">Search</button>
+    </div>
+    <div class="container container-delete">
+        <input type="search" class="field form-field-delete" placeholder="Bank name">
+        <button class="button-functional button-functional-delete" type="button">Delete</button>
     </div>
     <div class="container container-table">
         <table class="styled-table">
             <thead>
                 <tr>
                     <th>Bank name</th>
-                    <th>Interest Rate</th>
+                    <th>Interest Rate(%)</th>
                     <th>Maximum loan</th>
                     <th>Minimum down payment</th>
                     <th>Loan term</th>
@@ -78,6 +83,6 @@
         </div>
     </div>
     
-    <script src="http://localhost:3000/scripts/banks.js"></script>
+    <script type="module" src="http://localhost:3000/scripts/banks.js" charset="UTF-8"></script>
 </body>
 </html>

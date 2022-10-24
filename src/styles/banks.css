@@ -1,8 +1,5 @@
-.container-edit {
-    height: 100px;
-}
-
 .container-form {
+    margin-top: 2%;
     flex-direction: column;
 }
 
@@ -11,7 +8,13 @@
     width: 20%;
 }
 
-.container-search {
+.container-menu {
+    margin-top: 2%;
+    align-items: flex-start;
+}
+.container-edit,
+.container-delete {
+    margin-top: 2%;
     align-items: flex-start;
 }
 
@@ -57,7 +60,12 @@
     border-bottom: 1px solid #d3d3d3;
 }
 
-.form-field-search {
+.form-field-edit {
+    width: 30%;
+    margin-right: 40px;
+}
+
+.form-field-delete {
     width: 30%;
     margin-right: 40px;
 }
@@ -73,6 +81,10 @@
     color: white;
 }
 
-.button-functional-search {
+.button-functional-edit {
+    width: 10%;
+}
+
+.button-functional-delete {
     width: 10%;
 }
