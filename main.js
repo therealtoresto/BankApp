@@ -52,7 +52,7 @@ const serveFile = name => {
   const stream = fs.createReadStream(filePath);
   console.log('Served:', name);
   return stream;
-}
+};
 
 const server = http.createServer((req, res) => {
   const { url } = req;
@@ -71,6 +71,7 @@ const server = http.createServer((req, res) => {
     }
   } 
 });
+
 server.on('close', () => console.log('Server closed'));
 server.on('error', err => { throw err });
 server.listen(PORT, () => {

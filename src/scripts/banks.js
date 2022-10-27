@@ -46,6 +46,12 @@ const editBank = editButton.onclick = () => {
 }
 
 const deleteBank = deleteButton.onclick = () => {
+    fetch('/banks/table').then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      });
     if (deleteContainer.style.display == 'none') {
         deleteContainer.style.display = 'flex';
         table.style.display = '';
@@ -56,8 +62,6 @@ const deleteBank = deleteButton.onclick = () => {
         table.style.display = '';
         deleteContainer.style.display = 'none';
         creationForm.style.display = 'none';
-    fetch('127.0.0.1:3000/banks/table').then(data => console.log(data));
-
     }
 }
 
