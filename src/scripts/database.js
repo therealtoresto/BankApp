@@ -8,8 +8,25 @@ const pool = new Pool({
     password: 'postgres',
     port: 5432,
 });
+const insert = 'INSERT INTO banks( ' + 
+    'bank_name,' +
+    'interest_rate,' +
+    'maximum_loan,' +
+    'minimum_down_payment,' +
+    'loan_term) VALUES($1, $2, $3, $4, $5) RETURNING *';
 
-const setData = () => {};
+const setData = async ( data ) => {
+    try {
+        const client = await pool.connect();
+        for (let i = 1; i < data.length; i++) {
+            data[i] = +data[i];
+        }
+        console.log(data);
+        const res = await pool.query(insert, data)
+    } catch (err) {
+        console.log(err.stack);
+    }
+};
 const getData = async () => {
     const client = await pool.connect();
     const { rows } = await client.query('SELECT * FROM banks');

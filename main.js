@@ -21,18 +21,21 @@ const routing = {
   '/': 'index.html',
   '/banks': '/pages/banks.html',
   '/calculator': '/pages/calculator.html',
-  '/banks/table': () => getData(),
-};
-
-const types = {
-  object: JSON.stringify,
-  string: s => s,
-  number: n => n + '',
-  undefined: () => 'not found',
-  function : async (fn) => {
-      await fn();
+  '/banks/getData': () => getData(),
+  '/banks/sendData': (err, data) => {
+    if(err) throw err;
   },
 };
+
+// const types = {
+//   object: JSON.stringify,
+//   string: s => s,
+//   number: n => n + '',
+//   undefined: () => 'not found',
+//   function : async (fn) => {
+//       await fn();
+//   },
+// };
 
 const router = async client => {
   const route = routing[client.req.url];
@@ -55,6 +58,19 @@ const serveFile = name => {
 };
 
 const server = http.createServer((req, res) => {
+  const chunks = [];
+  req.on('data', chunk => {
+    chunks.push(chunk);
+    req.on('end', () => {
+      if (chunks) {
+        const buffer = Buffer.concat(chunks);
+        const data = buffer.toString();
+        const json = JSON.parse(data);
+        console.log('Client send:', json);
+        setData(json);
+      }
+    })
+  });
   const { url } = req;
   const name = !routing[url] ? url : routing[url];
   if (typeof name === 'function') {
