@@ -71,6 +71,7 @@ const server = http.createServer((req, res) => {
       }
     })
   });
+  
   const { url } = req;
   const name = !routing[url] ? url : routing[url];
   if (typeof name === 'function') {

@@ -21,7 +21,7 @@ const setData = async ( data ) => {
         for (let i = 1; i < data.length; i++) {
             data[i] = +data[i];
         }
-        console.log(data);
+        console.log('Added to batabase:', data);
         const res = await pool.query(insert, data)
     } catch (err) {
         console.log(err.stack);

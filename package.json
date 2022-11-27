@@ -1,6 +1,6 @@
 {
   "name": "bankapp",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "simple app for mortage calculation",
   "main": "main.js",
   "type": "module",

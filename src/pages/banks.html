@@ -15,13 +15,14 @@
     </header>
     <div class="container container-menu">
         <button type="button" onclick="createBank" class="menu-create-button">Create Bank</button>
-        <button type="button" onclick="" class="menu-edit-button">Edit Bank</button>
+        <button type="button" onclick="editBank" class="menu-edit-button">Edit Bank</button>
         <button type="button" onclick="" class="menu-delete-button">Delete Bank</button>
         <button role="button" onclick="location.href='http://localhost:3000'">Back</button>
     </div>
     <div class="container container-edit">
-        <input type="search" class="field form-field-edit" placeholder="Bank name">
-        <button class="button-functional button-functional-edit" type="button">Search</button>
+        <input type="search" class="field form-field-edit" list="datalist-edit"  placeholder="Bank name" required>
+        <datalist id="datalist-edit"></datalist>
+        <button class="button-functional button-functional-edit" type="button">Edit</button>
     </div>
     <div class="container container-delete">
         <input type="search" class="field form-field-delete" placeholder="Bank name">
@@ -39,7 +40,7 @@
                 </tr>
             </thead>
             <tbody class="tableBody">
-                <tr>
+                <!-- <tr>
                     <td>PrivatBank</td>
                     <td>7%</td>
                     <td>3000000</td>
@@ -66,7 +67,7 @@
                     <td>5000000</td>
                     <td>22</td>
                     <td>12</td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
     </div>
