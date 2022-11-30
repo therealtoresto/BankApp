@@ -7,6 +7,15 @@ body {
     margin: 0;
     padding: 0;
 }
+td {
+    text-align: center;
+}
+td:first-child {
+    text-align: left;
+}
+td:last-child {
+    text-align: right;
+}
 
 header {
     background-color: #f2f3f4;

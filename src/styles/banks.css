@@ -49,11 +49,17 @@
     background-color: #f3f3f3;
 }
 
-.styled-table tbody tr:hover {
+/* .styled-table tbody tr:hover {
     cursor: pointer;
     font-weight: bold;
     color: #f3f3f3;
     background-color: #778899;
+} */
+.focused {
+    cursor: pointer;
+    font-weight: bold;
+    color: #f3f3f3;
+    background-color: #778899 !important;
 }
 
 .styled-table tbody tr:last-child {

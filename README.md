@@ -89,4 +89,3 @@ database and show this record inthe history of the specific bank.
 ######  Charts and animations
   You can visualize any kind of bank information and plot it on the chart or 
 create some animations for bank CRUD operations. 
-
