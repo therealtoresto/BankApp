@@ -17,9 +17,16 @@ or any UI/UX library.
 banks and create/edit/remove the bank. Banks must be stored in the database, 
 the corresponding API should be provided for that. Here is the example of bank 
 schema that might be convenient to use during the development (though we 
-encourage you to investigate it a little bit more and find other parameters 
+encourage you to investigate it a little wewerqewr
+  ]
+  
+
+bit more and find other parameters 
 that are utilized in bank systems nowadays):
+wer
+
   - Bank name
+gwerwer
   - Interest rate - the annual percentage rate that expresses the amount of
   money the bank charges additionally for the use of assets the person 
   borrowed money for.
