@@ -1,16 +1,5 @@
 {
   "name": "bankapp",
-  "version": "0.0.3",
-  "description": "simple app for mortage calculation",
-  "main": "main.js",
-  "type": "module",
-  "scripts": {
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/therealtoresto/BankApp.git"
-  },
-  "keywords": [
-    "postgresql",
     "sql",
     "db",
     "database"
