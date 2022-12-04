@@ -9,6 +9,9 @@ payments using one of these bank’s settings.
 for the server to manage connections to DB. Use any preferred design style 
 or any UI/UX library.
 
+
+
+
 ###### Banks management page:
   On this page, a user should be able to see the list of all earlier created 
 banks and create/edit/remove the bank. Banks must be stored in the database, 
