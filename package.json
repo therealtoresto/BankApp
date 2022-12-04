@@ -1,9 +1,6 @@
 {
   "name": "bankapp",
   "version": "0.0.3",
-  "description": "simple app for mortage calculation",
-  "main": "main.js",
-  "type": "module",
   "scripts": {
     "test": "npm run",
     "start": "nodemon main.js"
