@@ -4,6 +4,8 @@
   Create a web application where users can create banks and calculate mortgage 
 payments using one of these bank’s settings.
 
+
+
 ###### Technical details:
   Use any programming language, any database management system, any language 
 for the server to manage connections to DB. Use any preferred design style 
